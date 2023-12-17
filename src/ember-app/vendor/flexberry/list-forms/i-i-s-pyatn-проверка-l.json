@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-проверка-e",
+  "editForm": "i-i-s-pyatn-проверка-e",
+  "external": false,
+  "caption": "Проверка",
+  "name": "IISPyatnПроверкаL",
+  "className": "ПроверкаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-проверка",
+      "modelProjection": "ПроверкаL"
+    }
+  ]
+}

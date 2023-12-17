@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Код бронирования",
+  "name": "IISPyatnКодБрониE",
+  "className": "КодБрониE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-код-брони",
+      "modelProjection": "КодБрониE"
+    }
+  ]
+}

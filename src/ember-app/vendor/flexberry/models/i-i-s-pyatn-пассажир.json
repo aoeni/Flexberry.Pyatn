@@ -1,0 +1,155 @@
+﻿{
+  "name": "IISPyatnПассажир",
+  "modelName": "i-i-s-pyatn-пассажир",
+  "className": "Пассажир",
+  "nameSpace": "IIS.Pyatn",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "фИО",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "кодБрони",
+      "relatedTo": "i-i-s-pyatn-код-брони",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "местоНаРейс",
+      "relatedTo": "i-i-s-pyatn-место-на-рейс",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПассажирE",
+      "modelName": "i-i-s-pyatn-пассажир",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Код",
+          "lookupValueField": "код",
+          "relationName": "КодБрони",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Код",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Код бронирования",
+          "name": "кодБрони",
+          "relatedTo": "i-i-s-pyatn-код-брони",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Место",
+          "lookupValueField": "место",
+          "relationName": "МестоНаРейс",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "место",
+              "caption": "Место",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Место на рейс",
+          "name": "местоНаРейс",
+          "relatedTo": "i-i-s-pyatn-место-на-рейс",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ПассажирL",
+      "modelName": "i-i-s-pyatn-пассажир",
+      "attrs": [
+        {
+          "name": "фИО",
+          "caption": "ФИО",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "МестоНаРейс",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "место",
+              "caption": "Место",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Место",
+          "name": "местоНаРейс",
+          "relatedTo": "i-i-s-pyatn-место-на-рейс",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "КодБрони",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "код",
+              "caption": "Код",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Код",
+          "name": "кодБрони",
+          "relatedTo": "i-i-s-pyatn-код-брони",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

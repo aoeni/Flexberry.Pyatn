@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "КодБрони",
+      "projection": "КодБрониL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "МестоНаРейс",
+      "projection": "МестоНаРейсL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Пассажир",
+  "name": "IISPyatnПассажирE",
+  "className": "ПассажирE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-пассажир",
+      "modelProjection": "ПассажирE"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-место-на-рейс-e",
+  "editForm": "i-i-s-pyatn-место-на-рейс-e",
+  "external": false,
+  "caption": "Место на рейс",
+  "name": "IISPyatnМестоНаРейсL",
+  "className": "МестоНаРейсL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-место-на-рейс",
+      "modelProjection": "МестоНаРейсL"
+    }
+  ]
+}

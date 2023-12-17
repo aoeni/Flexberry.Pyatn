@@ -1,0 +1,211 @@
+﻿
+
+
+
+
+CREATE TABLE ИнфБрон (
+ primaryKey UUID NOT NULL,
+ Пассажир UUID NOT NULL,
+ Рейс UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Проверка (
+ primaryKey UUID NOT NULL,
+ Дата TIMESTAMP(3) NULL,
+ Время VARCHAR(255) NULL,
+ ЛентаПечати BOOLEAN NULL,
+ Терминал UUID NOT NULL,
+ Оператор UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Рейс (
+ primaryKey UUID NOT NULL,
+ Куда VARCHAR(255) NULL,
+ Откуда VARCHAR(255) NULL,
+ Дата TIMESTAMP(3) NULL,
+ ВремяОтпр VARCHAR(255) NULL,
+ НачПосад VARCHAR(255) NULL,
+ КонецПосад VARCHAR(255) NULL,
+ Выход INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE КодБрони (
+ primaryKey UUID NOT NULL,
+ Код VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE МестоНаРейс (
+ primaryKey UUID NOT NULL,
+ Место VARCHAR(255) NULL,
+ Класс VARCHAR(6) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Терминал (
+ primaryKey UUID NOT NULL,
+ Номер INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Оператор (
+ primaryKey UUID NOT NULL,
+ ID INT NULL,
+ ФИО VARCHAR(255) NULL,
+ КодДоступа INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ПосадТалон (
+ primaryKey UUID NOT NULL,
+ ДатаВыд TIMESTAMP(3) NULL,
+ Пассажир UUID NOT NULL,
+ Рейс UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE Пассажир (
+ primaryKey UUID NOT NULL,
+ ФИО VARCHAR(255) NULL,
+ МестоНаРейс UUID NOT NULL,
+ КодБрони UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMNETLOCKDATA (
+ LockKey VARCHAR(300) NOT NULL,
+ UserName VARCHAR(300) NOT NULL,
+ LockDate TIMESTAMP(3) NULL,
+ PRIMARY KEY (LockKey));
+
+
+CREATE TABLE STORMSETTINGS (
+ primaryKey UUID NOT NULL,
+ Module VARCHAR(1000) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ "User" VARCHAR(255) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMAdvLimit (
+ primaryKey UUID NOT NULL,
+ "User" VARCHAR(255) NULL,
+ Published BOOLEAN NULL,
+ Module VARCHAR(255) NULL,
+ Name VARCHAR(255) NULL,
+ Value TEXT NULL,
+ HotKeyData INT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERSETTING (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMWEBSEARCH (
+ primaryKey UUID NOT NULL,
+ Name VARCHAR(255) NOT NULL,
+ "Order" INT NOT NULL,
+ PresentView VARCHAR(255) NOT NULL,
+ DetailedView VARCHAR(255) NOT NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERDETAIL (
+ primaryKey UUID NOT NULL,
+ Caption VARCHAR(255) NOT NULL,
+ DataObjectView VARCHAR(255) NOT NULL,
+ ConnectMasterProp VARCHAR(255) NOT NULL,
+ OwnerConnectProp VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE STORMFILTERLOOKUP (
+ primaryKey UUID NOT NULL,
+ DataObjectType VARCHAR(255) NOT NULL,
+ Container VARCHAR(255) NULL,
+ ContainerTag VARCHAR(255) NULL,
+ FieldsToView VARCHAR(255) NULL,
+ FilterSetting_m0 UUID NOT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE UserSetting (
+ primaryKey UUID NOT NULL,
+ AppName VARCHAR(256) NULL,
+ UserName VARCHAR(512) NULL,
+ UserGuid UUID NULL,
+ ModuleName VARCHAR(1024) NULL,
+ ModuleGuid UUID NULL,
+ SettName VARCHAR(256) NULL,
+ SettGuid UUID NULL,
+ SettLastAccessTime TIMESTAMP(3) NULL,
+ StrVal VARCHAR(256) NULL,
+ TxtVal TEXT NULL,
+ IntVal INT NULL,
+ BoolVal BOOLEAN NULL,
+ GuidVal UUID NULL,
+ DecimalVal DECIMAL(20,10) NULL,
+ DateTimeVal TIMESTAMP(3) NULL,
+ PRIMARY KEY (primaryKey));
+
+
+CREATE TABLE ApplicationLog (
+ primaryKey UUID NOT NULL,
+ Category VARCHAR(64) NULL,
+ EventId INT NULL,
+ Priority INT NULL,
+ Severity VARCHAR(32) NULL,
+ Title VARCHAR(256) NULL,
+ Timestamp TIMESTAMP(3) NULL,
+ MachineName VARCHAR(32) NULL,
+ AppDomainName VARCHAR(512) NULL,
+ ProcessId VARCHAR(256) NULL,
+ ProcessName VARCHAR(512) NULL,
+ ThreadName VARCHAR(512) NULL,
+ Win32ThreadId VARCHAR(128) NULL,
+ Message VARCHAR(2500) NULL,
+ FormattedMessage TEXT NULL,
+ PRIMARY KEY (primaryKey));
+
+
+
+ ALTER TABLE ИнфБрон ADD CONSTRAINT FK0b7874dd042f958539cb7e130c9d59da8e1505b6 FOREIGN KEY (Пассажир) REFERENCES Пассажир; 
+CREATE INDEX Index0b7874dd042f958539cb7e130c9d59da8e1505b6 on ИнфБрон (Пассажир); 
+
+ ALTER TABLE ИнфБрон ADD CONSTRAINT FK8e53b2f0403ab7d9eb930f4d6ea6965791175bf6 FOREIGN KEY (Рейс) REFERENCES Рейс; 
+CREATE INDEX Index8e53b2f0403ab7d9eb930f4d6ea6965791175bf6 on ИнфБрон (Рейс); 
+
+ ALTER TABLE Проверка ADD CONSTRAINT FK404d2be3002b71375402f859e0c8fb6548badbf3 FOREIGN KEY (Терминал) REFERENCES Терминал; 
+CREATE INDEX Index404d2be3002b71375402f859e0c8fb6548badbf3 on Проверка (Терминал); 
+
+ ALTER TABLE Проверка ADD CONSTRAINT FK0a224417d79234c44faa24be6939e5a24580e3a4 FOREIGN KEY (Оператор) REFERENCES Оператор; 
+CREATE INDEX Index0a224417d79234c44faa24be6939e5a24580e3a4 on Проверка (Оператор); 
+
+ ALTER TABLE ПосадТалон ADD CONSTRAINT FKa4c0187e06a390224b6770cab55ca928373d558b FOREIGN KEY (Пассажир) REFERENCES Пассажир; 
+CREATE INDEX Indexa4c0187e06a390224b6770cab55ca928373d558b on ПосадТалон (Пассажир); 
+
+ ALTER TABLE ПосадТалон ADD CONSTRAINT FK40aa915fc364d78b05f8f3014bf325ef1ebc7d84 FOREIGN KEY (Рейс) REFERENCES Рейс; 
+CREATE INDEX Index40aa915fc364d78b05f8f3014bf325ef1ebc7d84 on ПосадТалон (Рейс); 
+
+ ALTER TABLE Пассажир ADD CONSTRAINT FK0cb5c6fabc6ce6e08df35e0daf75ddabbb6446aa FOREIGN KEY (МестоНаРейс) REFERENCES МестоНаРейс; 
+CREATE INDEX Index0cb5c6fabc6ce6e08df35e0daf75ddabbb6446aa on Пассажир (МестоНаРейс); 
+
+ ALTER TABLE Пассажир ADD CONSTRAINT FK189d3d08f82eeccaa9f9d067df7668ac9d75fdee FOREIGN KEY (КодБрони) REFERENCES КодБрони; 
+CREATE INDEX Index189d3d08f82eeccaa9f9d067df7668ac9d75fdee on Пассажир (КодБрони); 
+
+ ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERDETAIL ADD CONSTRAINT FK921d16269835017e2a0d0e29ad6fb175454a70d0 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+
+ ALTER TABLE STORMFILTERLOOKUP ADD CONSTRAINT FKce38ef0db3f01a53acaa49fed8853fb941ad47ba FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
+

@@ -1,0 +1,112 @@
+<h3 class="ui header">{{t "forms.i-i-s-pyatn-рейс-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.куда
+      class=(if (v-get validationModel "куда" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-рейс-e.куда-caption")
+      data-test-i-i-s-pyatn-рейс-e-куда=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "куда" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.откуда
+      class=(if (v-get validationModel "откуда" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-рейс-e.откуда-caption")
+      data-test-i-i-s-pyatn-рейс-e-откуда=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "откуда" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pyatn-рейс-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-pyatn-рейс-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.времяОтпр
+      class=(if (v-get validationModel "времяОтпр" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-рейс-e.времяОтпр-caption")
+      data-test-i-i-s-pyatn-рейс-e-времяОтпр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "времяОтпр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.начПосад
+      class=(if (v-get validationModel "начПосад" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-рейс-e.начПосад-caption")
+      data-test-i-i-s-pyatn-рейс-e-начПосад=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "начПосад" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.конецПосад
+      class=(if (v-get validationModel "конецПосад" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-рейс-e.конецПосад-caption")
+      data-test-i-i-s-pyatn-рейс-e-конецПосад=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "конецПосад" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.выход
+      class=(if (v-get validationModel "выход" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-рейс-e.выход-caption")
+      data-test-i-i-s-pyatn-рейс-e-выход=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "выход" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pyatn-рейс-e.инфБрон-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="инфБронGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.инфБрон
+      content=model.инфБрон
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "инфБрон" "isInvalid") "error")
+      data-test-i-i-s-pyatn-рейс-e-инфБрон=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "инфБрон" "message")}}
+  </div>
+</form>

@@ -1,0 +1,71 @@
+﻿{
+  "applicationCaption": "Pyatn",
+  "applicationTitle": "Pyatn",
+  "items": [
+    {
+      "link": null,
+      "menuName": "pyatn",
+      "caption": "Pyatn",
+      "title": "Pyatn",
+      "children": [
+        {
+          "link": "i-i-s-pyatn-проверка-l",
+          "menuName": null,
+          "caption": "Проверка",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-pyatn-рейс-l",
+          "menuName": null,
+          "caption": "Рейс",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-pyatn-код-брони-l",
+          "menuName": null,
+          "caption": "Код бронирования",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-pyatn-место-на-рейс-l",
+          "menuName": null,
+          "caption": "Место на рейс",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-pyatn-терминал-l",
+          "menuName": null,
+          "caption": "Терминал",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-pyatn-оператор-l",
+          "menuName": null,
+          "caption": "Оператор",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-pyatn-посад-талон-l",
+          "menuName": null,
+          "caption": "Посадочный талон",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-pyatn-пассажир-l",
+          "menuName": null,
+          "caption": "Пассажир",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

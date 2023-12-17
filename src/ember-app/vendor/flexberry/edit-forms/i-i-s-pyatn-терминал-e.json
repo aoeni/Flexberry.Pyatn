@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Терминал",
+  "name": "IISPyatnТерминалE",
+  "className": "ТерминалE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-терминал",
+      "modelProjection": "ТерминалE"
+    }
+  ]
+}

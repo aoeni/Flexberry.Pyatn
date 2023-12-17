@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-рейс-e",
+  "editForm": "i-i-s-pyatn-рейс-e",
+  "external": false,
+  "caption": "Рейс",
+  "name": "IISPyatnРейсL",
+  "className": "РейсL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-рейс",
+      "modelProjection": "РейсL"
+    }
+  ]
+}

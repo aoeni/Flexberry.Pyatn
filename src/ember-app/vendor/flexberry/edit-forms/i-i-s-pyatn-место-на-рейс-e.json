@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Место на рейс",
+  "name": "IISPyatnМестоНаРейсE",
+  "className": "МестоНаРейсE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-место-на-рейс",
+      "modelProjection": "МестоНаРейсE"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Пассажир",
+      "projection": "ПассажирL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Рейс",
+      "projection": "РейсL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Посадочный талон",
+  "name": "IISPyatnПосадТалонE",
+  "className": "ПосадТалонE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-посад-талон",
+      "modelProjection": "ПосадТалонE"
+    }
+  ]
+}

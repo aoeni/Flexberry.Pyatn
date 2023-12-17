@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-код-брони-e",
+  "editForm": "i-i-s-pyatn-код-брони-e",
+  "external": false,
+  "caption": "Код бронирования",
+  "name": "IISPyatnКодБрониL",
+  "className": "КодБрониL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-код-брони",
+      "modelProjection": "КодБрониL"
+    }
+  ]
+}

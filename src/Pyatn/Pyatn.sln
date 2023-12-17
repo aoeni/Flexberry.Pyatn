@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyatn.Objects", "Objects/Pyatn.Objects.csproj", "{9DCB1431-6223-4850-9027-2CF8497D1811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pyatn.ODataBackend", "ODataBackend/Pyatn.ODataBackend.csproj", "{F69E5715-2A38-4A8B-9296-B691BF520E9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DCB1431-6223-4850-9027-2CF8497D1811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DCB1431-6223-4850-9027-2CF8497D1811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DCB1431-6223-4850-9027-2CF8497D1811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DCB1431-6223-4850-9027-2CF8497D1811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69E5715-2A38-4A8B-9296-B691BF520E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69E5715-2A38-4A8B-9296-B691BF520E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69E5715-2A38-4A8B-9296-B691BF520E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69E5715-2A38-4A8B-9296-B691BF520E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

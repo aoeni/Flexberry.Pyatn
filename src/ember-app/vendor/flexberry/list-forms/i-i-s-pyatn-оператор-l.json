@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-оператор-e",
+  "editForm": "i-i-s-pyatn-оператор-e",
+  "external": false,
+  "caption": "Оператор",
+  "name": "IISPyatnОператорL",
+  "className": "ОператорL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-оператор",
+      "modelProjection": "ОператорL"
+    }
+  ]
+}

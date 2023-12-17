@@ -1,0 +1,165 @@
+<h3 class="ui header">{{t "forms.i-i-s-pyatn-посад-талон-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pyatn-посад-талон-e.датаВыд-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаВыд
+      class=(if (v-get validationModel "датаВыд" "isInvalid") "error")
+      data-test-i-i-s-pyatn-посад-талон-e-датаВыд=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаВыд" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pyatn-посад-талон-e.пассажир-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.пассажир
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="пассажир"
+      projection="ПассажирL"
+      title=(t "forms.i-i-s-pyatn-посад-талон-e.пассажир-caption")
+      readonly=readonly
+      componentName="пассажирLookup"
+      class=(if (v-get validationModel "пассажир" "isInvalid") "error")
+      data-test-i-i-s-pyatn-посад-талон-e-пассажир=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "пассажир" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.пассажир.кодБрони.код
+      class=(if (v-get validationModel.пассажир.кодБрони "код" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-посад-талон-e.пассажир.кодБрони.код-caption")
+      data-test-i-i-s-pyatn-посад-талон-e-пассажир-кодБрони-код=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.пассажир.кодБрони "код" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-pyatn-посад-талон-e-пассажир-местоНаРейс-класс="true">
+    <label>{{t "forms.i-i-s-pyatn-посад-талон-e.пассажир.местоНаРейс.класс-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-pyatn-класс-билета")
+      value=model.пассажир.местоНаРейс.класс
+      class=(if (v-get validationModel.пассажир.местоНаРейс "класс" "isInvalid") "error")
+      readonly=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.пассажир.местоНаРейс "класс" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.пассажир.местоНаРейс.место
+      class=(if (v-get validationModel.пассажир.местоНаРейс "место" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-посад-талон-e.пассажир.местоНаРейс.место-caption")
+      data-test-i-i-s-pyatn-посад-талон-e-пассажир-местоНаРейс-место=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.пассажир.местоНаРейс "место" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pyatn-посад-талон-e.рейс-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.рейс
+      displayAttributeName="куда"
+      autocomplete=true
+      relationName="рейс"
+      projection="РейсL"
+      title=(t "forms.i-i-s-pyatn-посад-талон-e.рейс-caption")
+      readonly=readonly
+      componentName="рейсLookup"
+      class=(if (v-get validationModel "рейс" "isInvalid") "error")
+      data-test-i-i-s-pyatn-посад-талон-e-рейс=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "рейс" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-pyatn-посад-талон-e.рейс.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=true
+      value=model.рейс.дата
+      class=(if (v-get validationModel.рейс "дата" "isInvalid") "error")
+      data-test-i-i-s-pyatn-посад-талон-e-рейс-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.рейс "дата" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.рейс.откуда
+      class=(if (v-get validationModel.рейс "откуда" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-посад-талон-e.рейс.откуда-caption")
+      data-test-i-i-s-pyatn-посад-талон-e-рейс-откуда=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.рейс "откуда" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.рейс.времяОтпр
+      class=(if (v-get validationModel.рейс "времяОтпр" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-посад-талон-e.рейс.времяОтпр-caption")
+      data-test-i-i-s-pyatn-посад-талон-e-рейс-времяОтпр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.рейс "времяОтпр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.рейс.начПосад
+      class=(if (v-get validationModel.рейс "начПосад" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-посад-талон-e.рейс.начПосад-caption")
+      data-test-i-i-s-pyatn-посад-талон-e-рейс-начПосад=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.рейс "начПосад" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.рейс.конецПосад
+      class=(if (v-get validationModel.рейс "конецПосад" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-посад-талон-e.рейс.конецПосад-caption")
+      data-test-i-i-s-pyatn-посад-талон-e-рейс-конецПосад=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.рейс "конецПосад" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.рейс.выход
+      class=(if (v-get validationModel.рейс "выход" "isInvalid") "error")
+      label=(t "forms.i-i-s-pyatn-посад-талон-e.рейс.выход-caption")
+      data-test-i-i-s-pyatn-посад-талон-e-рейс-выход=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.рейс "выход" "message")}}
+  </div>
+</form>

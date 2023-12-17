@@ -1,0 +1,194 @@
+﻿{
+  "name": "IISPyatnРейс",
+  "modelName": "i-i-s-pyatn-рейс",
+  "className": "Рейс",
+  "nameSpace": "IIS.Pyatn",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяОтпр",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "выход",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "конецПосад",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "куда",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "начПосад",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "откуда",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "инфБрон",
+      "relatedTo": "i-i-s-pyatn-инф-брон",
+      "inverse": "рейс"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РейсE",
+      "modelName": "i-i-s-pyatn-рейс",
+      "attrs": [
+        {
+          "name": "куда",
+          "caption": "Куда",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "откуда",
+          "caption": "Откуда",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "времяОтпр",
+          "caption": "Время отправления",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "начПосад",
+          "caption": "Начало посадки",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "конецПосад",
+          "caption": "Конец посадки",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "выход",
+          "caption": "Выход",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ИнфБронE",
+          "caption": "Информация бронирования",
+          "name": "инфБрон",
+          "relatedTo": "i-i-s-pyatn-инф-брон",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РейсL",
+      "modelName": "i-i-s-pyatn-рейс",
+      "attrs": [
+        {
+          "name": "куда",
+          "caption": "Куда",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "откуда",
+          "caption": "Откуда",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "времяОтпр",
+          "caption": "Время отправления",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "начПосад",
+          "caption": "Начало посадки",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "конецПосад",
+          "caption": "Конец посадки",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "выход",
+          "caption": "Выход",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-пассажир-e",
+  "editForm": "i-i-s-pyatn-пассажир-e",
+  "external": false,
+  "caption": "Пассажир",
+  "name": "IISPyatnПассажирL",
+  "className": "ПассажирL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-пассажир",
+      "modelProjection": "ПассажирL"
+    }
+  ]
+}

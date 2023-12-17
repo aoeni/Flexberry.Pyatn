@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-посад-талон-e",
+  "editForm": "i-i-s-pyatn-посад-талон-e",
+  "external": false,
+  "caption": "Посадочный талон",
+  "name": "IISPyatnПосадТалонL",
+  "className": "ПосадТалонL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-посад-талон",
+      "modelProjection": "ПосадТалонL"
+    }
+  ]
+}

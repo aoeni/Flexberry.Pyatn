@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-pyatn-терминал-e",
+  "editForm": "i-i-s-pyatn-терминал-e",
+  "external": false,
+  "caption": "Терминал",
+  "name": "IISPyatnТерминалL",
+  "className": "ТерминалL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-pyatn-терминал",
+      "modelProjection": "ТерминалL"
+    }
+  ]
+}

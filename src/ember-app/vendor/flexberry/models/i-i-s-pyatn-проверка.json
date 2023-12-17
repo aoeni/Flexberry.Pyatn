@@ -186,15 +186,21 @@
           "hidden": false,
           "attrs": [
             {
+              "name": "iD",
+              "caption": "ID",
+              "hidden": false,
+              "index": 4
+            },
+            {
               "name": "фИО",
               "caption": "ФИО",
               "hidden": false,
-              "index": 4
+              "index": 5
             }
           ],
           "index": -1,
           "type": "default",
-          "caption": "ФИО",
+          "caption": "ID",
           "name": "оператор",
           "relatedTo": "i-i-s-pyatn-оператор",
           "inverse": null

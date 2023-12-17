@@ -70,8 +70,9 @@ export let defineProjections = function (modelClass) {
     терминал: belongsTo('i-i-s-pyatn-терминал', 'Номер', {
       номер: attr('Номер', { index: 3 })
     }, { index: -1, hidden: true }),
-    оператор: belongsTo('i-i-s-pyatn-оператор', 'ФИО', {
-      фИО: attr('ФИО', { index: 4 })
+    оператор: belongsTo('i-i-s-pyatn-оператор', 'ID', {
+      iD: attr('ID', { index: 4 }),
+      фИО: attr('ФИО', { index: 5 })
     }, { index: -1, hidden: true })
   });
 };

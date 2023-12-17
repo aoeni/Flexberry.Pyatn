@@ -43,7 +43,7 @@ $.extend(true, translations, {
     'i-i-s-pyatn-терминал': IISPyatnТерминалModel
   },
 
-  'application-name': 'Pyatn',
+  'application-name': 'Терминал',
 
   forms: {
     loading: {
@@ -82,7 +82,7 @@ $.extend(true, translations, {
       },
 
       footer: {
-        'application-name': 'Pyatn',
+        'application-name': 'Терминал',
         'application-version': {
           caption: 'Addon version {{version}}',
           title: 'It is version of ember-flexberry addon, which uses in this dummy application ' +
@@ -93,8 +93,8 @@ $.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: 'Pyatn',
-          title: 'Pyatn'
+          caption: 'Терминал',
+          title: 'Терминал'
         },
         'application-version': {
           caption: 'Addon version {{version}}',

@@ -31,7 +31,9 @@ namespace IIS.Pyatn
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("ИнфБронE", new string[] {
             "Пассажир as \'Пассажир\'",
-            "Пассажир.ФИО as \'ФИО\'"}, Hidden=new string[] {
+            "Пассажир.КодБрони.Код as \'Код бронирования\'",
+            "Пассажир.ФИО as \'ФИО\'",
+            "Пассажир.МестоНаРейс.Место as \'Место\'"}, Hidden=new string[] {
             "Пассажир.ФИО"})]
     [MasterViewDefineAttribute("ИнфБронE", "Пассажир", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
     public class ИнфБрон : ICSSoft.STORMNET.DataObject

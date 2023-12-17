@@ -47,6 +47,7 @@ namespace IIS.Pyatn
             "Время as \'Время\'",
             "ЛентаПечати as \'Лента печати\'",
             "Терминал.Номер as \'Номер\'",
+            "Оператор.ID as \'ID\'",
             "Оператор.ФИО as \'ФИО\'"})]
     public class Проверка : ICSSoft.STORMNET.DataObject
     {

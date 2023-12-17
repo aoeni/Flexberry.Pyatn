@@ -47,6 +47,9 @@ export default {
       },
       оператор: {
         __caption__: 'ФИО',
+        iD: {
+          __caption__: 'ID'
+        },
         фИО: {
           __caption__: 'ФИО'
         }

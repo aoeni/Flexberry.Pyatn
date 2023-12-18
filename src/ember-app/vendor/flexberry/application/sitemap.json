@@ -4,9 +4,9 @@
   "items": [
     {
       "link": null,
-      "menuName": "pyatn",
-      "caption": "Pyatn",
-      "title": "Pyatn",
+      "menuName": "терминал",
+      "caption": "Терминал",
+      "title": "Терминал",
       "children": [
         {
           "link": "i-i-s-pyatn-проверка-l",

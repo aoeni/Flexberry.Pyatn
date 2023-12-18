@@ -106,6 +106,42 @@ $.extend(true, translations, {
           caption: 'Главная',
           title: ''
         },
+        терминал: {
+          caption: 'Терминал',
+          title: 'Терминал',
+          'i-i-s-pyatn-проверка-l': {
+            caption: 'Проверка',
+            title: ''
+          },
+          'i-i-s-pyatn-рейс-l': {
+            caption: 'Рейс',
+            title: ''
+          },
+          'i-i-s-pyatn-код-брони-l': {
+            caption: 'Код бронирования',
+            title: ''
+          },
+          'i-i-s-pyatn-место-на-рейс-l': {
+            caption: 'Место на рейс',
+            title: ''
+          },
+          'i-i-s-pyatn-терминал-l': {
+            caption: 'Терминал',
+            title: ''
+          },
+          'i-i-s-pyatn-оператор-l': {
+            caption: 'Оператор',
+            title: ''
+          },
+          'i-i-s-pyatn-посад-талон-l': {
+            caption: 'Посадочный талон',
+            title: ''
+          },
+          'i-i-s-pyatn-пассажир-l': {
+            caption: 'Пассажир',
+            title: ''
+          }
+        },
         pyatn: {
           caption: 'Pyatn',
           title: 'Pyatn',

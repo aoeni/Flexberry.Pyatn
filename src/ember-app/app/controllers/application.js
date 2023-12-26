@@ -28,48 +28,49 @@ export default Controller.extend({
             link: 'i-i-s-pyatn-проверка-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-проверка-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-проверка-l.title'),
-            icon: 'file',
+            icon: 'edit',
             children: null
           }, {
             link: 'i-i-s-pyatn-рейс-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-рейс-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-рейс-l.title'),
-            icon: 'folder',
+            icon: 'folder open',
             children: null
           }, {
             link: 'i-i-s-pyatn-код-брони-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-код-брони-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-код-брони-l.title'),
-            icon: 'chart bar',
+            icon: 'briefcase',
             children: null
           }, {
             link: 'i-i-s-pyatn-место-на-рейс-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-место-на-рейс-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-место-на-рейс-l.title'),
-            icon: 'file',
+            icon: 'paperclip',
             children: null
           }, {
             link: 'i-i-s-pyatn-терминал-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-терминал-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-терминал-l.title'),
-            icon: 'list',
+            icon: 'book',
             children: null
           }, {
             link: 'i-i-s-pyatn-оператор-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-оператор-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-оператор-l.title'),
-            icon: 'folder',
+            icon: 'phone',
             children: null
           }, {
             link: 'i-i-s-pyatn-посад-талон-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-посад-талон-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-посад-талон-l.title'),
-            icon: 'table',
+            icon: 'file',
             children: null
           }, {
             link: 'i-i-s-pyatn-пассажир-l',
             caption: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-пассажир-l.caption'),
             title: i18n.t('forms.application.sitemap.терминал.i-i-s-pyatn-пассажир-l.title'),
+            icon: 'phone',
             children: null
           }]
         }
